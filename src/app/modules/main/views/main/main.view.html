@@ -1,50 +1,17 @@
-<nav class="navbar navbar-default">
+<nav id="top-nav" class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
+	  
+	  <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"></button>
+	  
       <a class="navbar-brand" href="#">{{title}}</a>
-    </div>
-    <ul class="nav navbar-nav">
-
-    </ul>
-  </div>
-</nav>
-
-
-
-
-
-
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">{{title}}</a>
+	  
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
 	  
-		<li class="active"><a routerLink="/dashboards" 	routerLinkActive="active">Dashboards</a></li>
-		<li><a routerLink="/layouts">Layouts</a></li>
-		<li><a routerLink="/graphs">Graphs</a></li>
-		<li><a routerLink="/mailbox">Mailbox</a></li>
-		<li><a routerLink="/metrics">Metrics</a></li>
-		<li><a routerLink="/widgets">Widgets</a></li>
-		<li><a routerLink="/forms">Forms</a></li>
-		<li><a routerLink="/appviews">App Views</a></li>
-		<li  class="dropdown">		
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">UI Elements <span class="caret"></span></a>			
-			<ul class="dropdown-menu">
-				<li><a routerLink="/uielements/input">Input</a></li>
-			</ul>			
-		</li>
-		<li><a routerLink="/gridoptions">Grid Options</a></li>
-		<li><a routerLink="/tables">Tables</a></li>
-		<li><a routerLink="/menulevels">Menu Levels</a></li>
+		<li></li>
+		
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" routerLink="/registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -55,17 +22,50 @@
 </nav>
 
 
+<div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Bootstrap Sidebar</h3>
+					<img [src]="fullImagePath" />
+                </div>
 
+                <ul class="list-unstyled components">
+                    <!--p>Dummy Heading</p-->
+					
+					<li class="active"><a routerLink="/dashboards" 	routerLinkActive="active">Dashboards</a></li>
+					<li><a routerLink="/layouts">Layouts</a></li>
+					<li><a routerLink="/graphs">Graphs</a></li>
+					<li><a routerLink="/mailbox">Mailbox</a></li>
+					<li><a routerLink="/metrics">Metrics</a></li>
+					<li><a routerLink="/widgets">Widgets</a></li>
+					<li><a routerLink="/forms">Forms</a></li>
+					<li><a routerLink="/appviews">App Views</a></li>
+					
+					<li class="dropdown">		
+						<a href="#uicomponentsSubmenu" data-toggle="collapse" aria-expanded="false">UI Elements</a>			
+						<ul class="collapse list-unstyled" id="uicomponentsSubmenu">
+							<li><a routerLink="/uielements/input">Input</a></li>
+							<li><a routerLink="/uielements/autocomplete">Autocomplete</a></li>
+							<li><a routerLink="/uielements/checkbox">Checkbox</a></li>
+							<li><a routerLink="/uielements/radio">Radio</a></li>
+							<li><a routerLink="/uielements/datepicker">Datepicker</a></li>
+							<li><a routerLink="/uielements/select">Select</a></li>
+							<li><a routerLink="/uielements/slider">Slider</a></li>
+						</ul>			
+					</li>
+					<li><a routerLink="/gridoptions">Grid Options</a></li>
+					<li><a routerLink="/tables">Tables</a></li>
+					<li><a routerLink="/menulevels">Menu Levels</a></li>
+					
+                </ul>
 
+            </nav>
 
-
-
-  
-<div class="container">
-
-	<router-outlet></router-outlet>
-  
-</div>
-
-
-
+            <!-- Page Content Holder -->
+            <div id="content">
+			
+				<router-outlet></router-outlet>	
+				
+            </div>
+        </div>

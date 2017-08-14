@@ -1,0 +1,75 @@
+<md-tab-group>
+  <md-tab>
+    <ng-template md-tab-label>OVERVIEW</ng-template>
+    
+	<div class="component-container">	
+	
+		<md-card>
+		  <md-card-content>
+			<h2 class="example-h2">Checkbox configuration</h2>
+
+			<section class="example-section">
+			  <md-checkbox class="example-margin" [(ngModel)]="checked">Checked</md-checkbox>
+			  <md-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</md-checkbox>
+			</section>
+
+			<section class="example-section">
+			  <label class="example-margin">Align:</label>
+			  <md-radio-group [(ngModel)]="align">
+				<md-radio-button class="example-margin" value="start">Start</md-radio-button>
+				<md-radio-button class="example-margin" value="end">End</md-radio-button>
+			  </md-radio-group>
+			</section>
+
+			<section class="example-section">
+			  <md-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</md-checkbox>
+			</section>
+		  </md-card-content>
+		</md-card>
+
+		<md-card class="result">
+		  <md-card-content>
+			<h2 class="example-h2">Result</h2>
+
+			<section class="example-section">
+			  <md-checkbox
+				  class="example-margin"
+				  [checked]="checked"
+				  [indeterminate]="indeterminate"
+				  [align]="align"
+				  [disabled]="disabled">
+				I'm a checkbox
+			  </md-checkbox>
+			</section>
+		  </md-card-content>
+		</md-card>
+		
+	</div>
+	
+	<md-autocomplete #auto="mdAutocomplete">
+	  <md-option *ngFor="let state of filteredStates | async" [value]="state">
+		{{ state }}
+	  </md-option>
+	</md-autocomplete>
+	
+	
+  </md-tab>
+  <md-tab>
+    <ng-template md-tab-label>API</ng-template>
+	
+    <h1>API</h1>
+	
+  </md-tab>
+  
+  <md-tab>
+    <ng-template md-tab-label>EXAMPLES</ng-template>
+	
+    <h1>EXAMPLES</h1>
+	
+  </md-tab>
+  
+</md-tab-group>
+
+
+
+

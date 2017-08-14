@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./main.view.css']
 })
 export class MainView {
-  title = 'MBS Kitchen Sink';
+	title = 'MBS Kitchen Sink';
+	fullImagePath = '../../../../../logo.png';
 }
