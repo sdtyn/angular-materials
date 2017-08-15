@@ -1,32 +1,10 @@
-<nav id="top-nav" class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-	  
-	  <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"></button>
-	  
-      <a class="navbar-brand" href="#">{{title}}</a>
-	  
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-	  
-		<li></li>
-		
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" routerLink="/registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#" routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+
 
 
 <div class="wrapper">
             <!-- Sidebar Holder -->
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3>Bootstrap Sidebar</h3>
 					<img [src]="fullImagePath" />
                 </div>
 
@@ -65,7 +43,39 @@
             <!-- Page Content Holder -->
             <div id="content">
 			
-				<router-outlet></router-outlet>	
+				<nav id="top-nav" class="navbar navbar-default">
+				  <div class="container-fluid">
+					<div class="navbar-header">					  
+						<div class="navbar-header-first-colum">			
+							<button type="button" id="sidebarCollapse" class="nav-sidebar-button"></button>
+							<div class="navbar-title-container">
+								<a class="navbar-title" href="#">{{title}}</a>
+							</div>
+						</div>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+					  <ul class="nav navbar-nav">
+					  
+						<li></li>
+						
+					  </ul>
+					  <ul class="nav navbar-nav navbar-right">
+						<li><a href="#" routerLink="/registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+						<li><a href="#" routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					  </ul>
+					</div>
+				  </div>
+				</nav>
+			
+				<div id="router-container">
+					<div class="bg-white full-width full-height padding-10 item-border-top">
+						<router-outlet></router-outlet>
+					</div>
+				</div>
+				
+				<div id="footer">
+					<div class="footer-content padding-10">Copyright Example Company © 2014-2017</div>
+				</div>
 				
             </div>
         </div>
