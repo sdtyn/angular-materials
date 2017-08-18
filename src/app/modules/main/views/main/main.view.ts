@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class MainView {
 	title = 'Kitchen Sink';
-	fullImagePath = ('assets/logo.png');
 }
