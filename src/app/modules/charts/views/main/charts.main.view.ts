@@ -14,11 +14,14 @@ import { ChartsService } from '../../services/charts.service';
 export class ChartsMainView implements OnInit {
 	title = 'charts-main-view';
 	options;
-	configurations;
+	configurationsForDisceterBarChart;
+	configurationsForScatterLineChart;
   
 	constructor(private chartsService: ChartsService) { }  
   
 	ngOnInit() {  
-		this.configurations = this.chartsService.getDiscreterBarChart();  
+		this.configurationsForDisceterBarChart = this.chartsService.getConfigurationsForDiscreterBarChart();  
+		
+		this.configurationsForScatterLineChart = this.chartsService.getConfigurationsForScatterLineChart(); 
 	}
 }
