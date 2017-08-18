@@ -1,5 +1,6 @@
 import { BrowserModule } 		from '@angular/platform-browser';
 import { NgModule } 			from '@angular/core';
+import { NvD3Module } from 'ng2-nvd3';
 
 /* App Root */
 import { MainView } 			from './views/main/main.view';
@@ -10,6 +11,7 @@ import { ExceptionsModule } 	from '../exceptions/exceptions.module';
 import { LoginModule } 			from '../login/login.module';
 import { HomeModule } 			from '../home/home.module';
 import { UIElementsModule } 	from '../uielements/uielements.module';
+import { ChartsModule } 		from '../charts/charts.module';
 
 /* Routing Module */
 import { RoutingModule } 		from '../core/routing.module';
@@ -25,7 +27,9 @@ import { RoutingModule } 		from '../core/routing.module';
 	LoginModule,
 	HomeModule,
 	UIElementsModule,
-    RoutingModule
+	ChartsModule,
+    RoutingModule,
+	NvD3Module
   ],
   providers: [],
   bootstrap: [MainView]
