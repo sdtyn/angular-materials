@@ -4,19 +4,15 @@
     
 	<div class="component-container">	
 	
-		<md-input-container>
+				
+				
+		<md-input-container class="example-full-width">
 		  <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
-		  <button mdSuffix ></button><!-- [mdDatepickerToggle]="picker" -->
 		</md-input-container>
 		<md-datepicker #picker></md-datepicker>
+		<button md-raised-button (click)="picker.open()">Open</button>
 				
 	</div>
-	
-	<md-autocomplete #auto="mdAutocomplete">
-	  <md-option *ngFor="let state of filteredStates | async" [value]="state">
-		{{ state }}
-	  </md-option>
-	</md-autocomplete>
 	
 	
   </md-tab>

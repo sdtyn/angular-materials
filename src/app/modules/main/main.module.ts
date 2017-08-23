@@ -12,6 +12,7 @@ import { LoginModule } 			from '../login/login.module';
 import { HomeModule } 			from '../home/home.module';
 import { UIElementsModule } 	from '../uielements/uielements.module';
 import { ChartsModule } 		from '../charts/charts.module';
+import { CustomModule } 		from '../custom/custom.module';
 
 /* Routing Module */
 import { RoutingModule } 		from '../core/routing.module';
@@ -22,14 +23,15 @@ import { RoutingModule } 		from '../core/routing.module';
   ],
   imports: [
     BrowserModule,
-	RegistrationModule,
-	ExceptionsModule,
-	LoginModule,
-	HomeModule,
-	UIElementsModule,
-	ChartsModule,
+	  RegistrationModule,
+	  ExceptionsModule,
+	  LoginModule,
+	  HomeModule,
+    UIElementsModule,
+    ChartsModule,
+    CustomModule,
     RoutingModule,
-	NvD3Module
+	  NvD3Module
   ],
   providers: [],
   bootstrap: [MainView]

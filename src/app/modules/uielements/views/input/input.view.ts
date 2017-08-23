@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormatterUtils } from 'bow-lib/FormatterUtils';
+
 
 @Component({
   selector: 'input-view',

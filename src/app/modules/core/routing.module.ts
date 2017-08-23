@@ -10,6 +10,7 @@ export const routes: Routes = [
   { path: 'login',							redirectTo: 'login', 			pathMatch: 'full' },
   { path: '',								redirectTo: 'uielements', 		pathMatch: 'full' },
   { path: 'charts',							redirectTo: 'charts', 			pathMatch: 'full' },
+  { path: 'custom',							redirectTo: 'custom', 			pathMatch: 'full' },
   { path: '**',								redirectTo: 'exception/404', 	pathMatch: 'full' }
 ];
 

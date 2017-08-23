@@ -1,72 +1,84 @@
 <md-tab-group>
-  <md-tab>
-    <ng-template md-tab-label>OVERVIEW</ng-template>
-    
-	<div class="component-container">	
-	
-		<form class="example-form">
-		  <md-input-container class="example-full-width">
-			<input mdInput placeholder="Company (disabled)" disabled value="Google">
-		  </md-input-container>
+    <md-tab>
+        <ng-template md-tab-label>OVERVIEW {{title}}</ng-template>
 
-		  <table class="example-full-width" cellspacing="0"><tr>
-			<td><md-input-container class="example-full-width">
-			  <input mdInput placeholder="First name">
-			</md-input-container></td>
-			<td><md-input-container class="example-full-width">
-			  <input mdInput placeholder="Long Last Name That Will Be Truncated">
-			</md-input-container></td>
-		  </tr></table>
+        <div class="component-container">
 
-		  <p>
-			<md-input-container class="example-full-width">
-			  <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
-			</md-input-container>
-			<md-input-container class="example-full-width">
-			  <textarea mdInput placeholder="Address 2"></textarea>
-			</md-input-container>
-		  </p>
+            <form class="example-form">
+                <md-input-container class="example-full-width">
+                    <input mdInput placeholder="Company (disabled)" disabled value="Google">
+                </md-input-container>
 
-		  <table class="example-full-width" cellspacing="0"><tr>
-			<td><md-input-container class="example-full-width">
-			  <input mdInput placeholder="City">
-			</md-input-container></td>
-			<td><md-input-container class="example-full-width">
-			  <input mdInput placeholder="State">
-			</md-input-container></td>
-			<td><md-input-container class="example-full-width">
-			  <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
-			  <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
-			</md-input-container></td>
-		  </tr></table>
-		</form>
-		
-	</div>
-	
-	<md-autocomplete #auto="mdAutocomplete">
-	  <md-option *ngFor="let state of filteredStates | async" [value]="state">
-		{{ state }}
-	  </md-option>
-	</md-autocomplete>
-	
-	
-  </md-tab>
-  <md-tab>
-    <ng-template md-tab-label>API</ng-template>
-	
-    <h1>API</h1>
-	
-  </md-tab>
-  
-  <md-tab>
-    <ng-template md-tab-label>EXAMPLES</ng-template>
-	
-    <h1>EXAMPLES</h1>
-	
-  </md-tab>
-  
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+                        <td>
+                            <md-input-container class="example-full-width">
+                                <input mdInput placeholder="First name">
+                            </md-input-container>
+                        </td>
+                        <td>
+                            <md-input-container class="example-full-width">
+                                <input mdInput placeholder="Long Last Name That Will Be Truncated">
+                            </md-input-container>
+                        </td>
+                    </tr>
+                </table>
+
+                <p>
+                    <md-input-container class="example-full-width">
+                        <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+                    </md-input-container>
+                    <md-input-container class="example-full-width">
+                        <textarea mdInput placeholder="Address 2"></textarea>
+                    </md-input-container>
+                </p>
+
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+                        <td>
+                            <md-input-container class="example-full-width">
+                                <input mdInput placeholder="City">
+                            </md-input-container>
+                        </td>
+                        <td>
+                            <md-input-container class="example-full-width">
+                                <input mdInput placeholder="State">
+                            </md-input-container>
+                        </td>
+                        <td>
+                            <md-input-container class="example-full-width">
+                                <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+                                <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+                            </md-input-container>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+
+        <md-autocomplete #auto="mdAutocomplete">
+            <md-option *ngFor="let state of filteredStates | async" [value]="state">
+                {{ state }}
+            </md-option>
+        </md-autocomplete>
+
+
+    </md-tab>
+    <md-tab>
+        <ng-template md-tab-label>API</ng-template>
+
+        <h1>API</h1>
+
+
+
+    </md-tab>
+
+    <md-tab>
+        <ng-template md-tab-label>EXAMPLES</ng-template>
+
+        <h1>EXAMPLES</h1>
+
+    </md-tab>
+
 </md-tab-group>
-
-
-
-

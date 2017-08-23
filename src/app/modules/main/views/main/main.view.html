@@ -1,76 +1,74 @@
-
-
-
 <div class="wrapper">
-            <!-- Sidebar Holder -->
-            <nav id="sidebar">
-                <div class="sidebar-header">
-					<img id="logo-img" />
-                </div>
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <img id="logo-img" />
+        </div>
 
-                <ul class="list-unstyled components">
-                    <!--p>Dummy Heading</p-->
-					
-					<li class="active"><a routerLink="/dashboards" 	routerLinkActive="active">Dashboards</a></li>
-					<li><a routerLink="/layouts">Layouts</a></li>
-					<li><a routerLink="/graphs">Graphs</a></li>
-					<li><a routerLink="/mailbox">Mailbox</a></li>
-					<li><a routerLink="/metrics">Metrics</a></li>
-					<li><a routerLink="/widgets">Widgets</a></li>
-					<li><a routerLink="/forms">Forms</a></li>
-					<li><a routerLink="/appviews">App Views</a></li>
-					<li><a routerLink="/charts">Charts</a></li>
-					<li class="dropdown">		
-						<a href="#uicomponentsSubmenu" data-toggle="collapse" aria-expanded="false">UI Elements</a>			
-						<ul class="collapse list-unstyled" id="uicomponentsSubmenu">
-							<li><a routerLink="/uielements/input">Input</a></li>
-							<li><a routerLink="/uielements/autocomplete">Autocomplete</a></li>
-							<li><a routerLink="/uielements/checkbox">Checkbox</a></li>
-							<li><a routerLink="/uielements/radio">Radio</a></li>
-							<li><a routerLink="/uielements/datepicker">Datepicker</a></li>
-							<li><a routerLink="/uielements/select">Select</a></li>
-							<li><a routerLink="/uielements/slider">Slider</a></li>
-						</ul>			
-					</li>
-					<li><a routerLink="/gridoptions">Grid Options</a></li>
-					<li><a routerLink="/tables">Tables</a></li>
-					<li><a routerLink="/menulevels">Menu Levels</a></li>
-					
+        <ul class="list-unstyled components">
+            <!--p>Dummy Heading</p-->
+
+            <li class="active"><a routerLink="/dashboards" routerLinkActive="active">Dashboards</a></li>
+            <li><a routerLink="/layouts">Layouts</a></li>
+            <li><a routerLink="/graphs">Graphs</a></li>
+            <li><a routerLink="/mailbox">Mailbox</a></li>
+            <li><a routerLink="/metrics">Metrics</a></li>
+            <li><a routerLink="/widgets">Widgets</a></li>
+            <li><a routerLink="/forms">Forms</a></li>
+            <li><a routerLink="/appviews">App Views</a></li>
+            <li><a routerLink="/charts">Charts</a></li>
+            <li class="dropdown">
+                <a href="#uicomponentsSubmenu" data-toggle="collapse" aria-expanded="false">UI Elements</a>
+                <ul class="collapse list-unstyled" id="uicomponentsSubmenu">
+                    <li><a routerLink="/uielements/input">Input</a></li>
+                    <li><a routerLink="/uielements/autocomplete">Autocomplete</a></li>
+                    <li><a routerLink="/uielements/checkbox">Checkbox</a></li>
+                    <li><a routerLink="/uielements/radio">Radio</a></li>
+                    <li><a routerLink="/uielements/datepicker">Datepicker</a></li>
+                    <li><a routerLink="/uielements/select">Select</a></li>
+                    <li><a routerLink="/uielements/slider">Slider</a></li>
+                    <li><a routerLink="/custom">Custom</a></li>
                 </ul>
+            </li>
+            <li><a routerLink="/gridoptions">Grid Options</a></li>
+            <li><a routerLink="/tables">Tables</a></li>
+            <li><a routerLink="/menulevels">Menu Levels</a></li>
 
-            </nav>
+        </ul>
 
-            <!-- Page Content Holder -->
-            <div id="content">
-			
-				<nav id="top-nav" class="navbar navbar-default">
-				  <div class="container-fluid">
-					<div class="navbar-header">					  
-						<div class="navbar-header-first-colum">			
-							<button type="button" id="sidebarCollapse" class="nav-sidebar-button"></button>
-							<div class="navbar-title-container">
-								<a class="navbar-title" href="#">{{title}}</a>
-							</div>
-						</div>
-					</div>
-					<div class="collapse navbar-collapse" id="myNavbar">					
-					  <ul class="nav navbar-nav navbar-right">
-						<li><a href="#" routerLink="/registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-						<li><a href="#" routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					  </ul>
-					</div>
-				  </div>
-				</nav>
-			
-				<div id="router-container">
-					<div class="bg-white full-width full-height padding-10 item-border-top">
-						<router-outlet></router-outlet>
-					</div>
-				</div>
-				
-				<div id="footer">
-					<div class="footer-content padding-10">Copyright Example Company © 2014-2017</div>
-				</div>
-				
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+        <nav id="top-nav" class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="navbar-header-first-colum">
+                        <button type="button" id="sidebarCollapse" class="nav-sidebar-button"></button>
+                        <div class="navbar-title-container">
+                            <a class="navbar-title" href="#">{{title}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" routerLink="/registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#" routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="router-container">
+            <div class="bg-white full-width full-height padding-10 item-border-top">
+                <router-outlet></router-outlet>
             </div>
         </div>
+
+        <div id="footer">
+            <div class="footer-content padding-10">Copyright Example Company © 2014-2017</div>
+        </div>
+
+    </div>
+</div>

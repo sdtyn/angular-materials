@@ -3,7 +3,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-import { MaterialModule, MdDatepickerModule, MdNativeDateModule } from '@angular/material';
+import {
+  MaterialModule, 
+  MdDatepickerModule, 
+  MdNativeDateModule, 
+  MdButtonModule,
+  MdButtonToggleModule, 
+} from '@angular/material';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
@@ -31,22 +37,25 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     InputView,
-	AutocompleteView,
-	CheckboxView,
-	RadioView,
-	DatepickerView,
-	SelectView,
-	SliderView
+	  AutocompleteView,
+	  CheckboxView,
+	  RadioView,
+	  DatepickerView,
+	  SelectView,
+    SliderView
   ],
   imports: [
     BrowserModule,
-	RouterModule.forChild(routes),
-	NoopAnimationsModule,
-	FormsModule,
-	ReactiveFormsModule,
-	MaterialModule,
-	MdNativeDateModule,
-	MdDatepickerModule
+  	RouterModule.forChild(routes),
+  	NoopAnimationsModule,
+  	FormsModule,
+  	ReactiveFormsModule,
+  	MaterialModule, 
+    MdButtonModule,
+    MdButtonToggleModule, 
+  	MdNativeDateModule,
+    MdDatepickerModule
+    
   ],
   exports: [RouterModule],
   providers: [],
@@ -57,7 +66,7 @@ const routes: Routes = [
 	  RadioView,
 	  DatepickerView,
 	  SelectView,
-	  SliderView
+    SliderView    
   ]
 })
 export class UIElementsModule { }
