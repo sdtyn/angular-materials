@@ -9,6 +9,7 @@ import {
   MdNativeDateModule, 
   MdButtonModule,
   MdButtonToggleModule, 
+  MdIconModule
 } from '@angular/material';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -21,6 +22,7 @@ import { RadioView } from './views/radio/radio.view';
 import { DatepickerView } from './views/datepicker/datepicker.view';
 import { SelectView } from './views/select/select.view';
 import { SliderView } from './views/slider/slider.view';
+import { Datepicker } from './views/datepicker/components/datepicker.component';
 
 
 const routes: Routes = [
@@ -42,7 +44,8 @@ const routes: Routes = [
 	  RadioView,
 	  DatepickerView,
 	  SelectView,
-    SliderView
+    SliderView,
+    Datepicker
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ const routes: Routes = [
     MdButtonModule,
     MdButtonToggleModule, 
   	MdNativeDateModule,
-    MdDatepickerModule
+    MdDatepickerModule,
+    MdIconModule
     
   ],
   exports: [RouterModule],
@@ -66,7 +70,8 @@ const routes: Routes = [
 	  RadioView,
 	  DatepickerView,
 	  SelectView,
-    SliderView    
+    SliderView,
+    Datepicker
   ]
 })
 export class UIElementsModule { }

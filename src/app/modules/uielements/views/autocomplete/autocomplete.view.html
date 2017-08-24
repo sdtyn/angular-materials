@@ -1,36 +1,36 @@
 <md-tab-group>
-  <md-tab>
-    <ng-template md-tab-label>OVERVIEW</ng-template>
-    
-	<div class="component-container">	
-	
-		<md-input-container>
-		  <input mdInput placeholder="State" [mdAutocomplete]="auto" [formControl]="stateCtrl">
-		</md-input-container>
-		
-	</div>
-	
-	
-	<md-autocomplete #auto="mdAutocomplete">
-	  <md-option *ngFor="let state of filteredStates | async" [value]="state">
-		{{ state }}
-	  </md-option>
-	</md-autocomplete>
-	
-	
-  </md-tab>
-  <md-tab>
-    <ng-template md-tab-label>API</ng-template>
-	
-    <h1>API</h1>
-	
-  </md-tab>
-  
-  <md-tab>
-    <ng-template md-tab-label>EXAMPLES</ng-template>
-	
-    <h1>EXAMPLES</h1>
-	
-  </md-tab>
-  
+    <md-tab>
+        <ng-template md-tab-label>OVERVIEW</ng-template>
+
+        <div class="component-container">
+
+            <md-input-container>
+                <input mdInput placeholder="State" [mdAutocomplete]="auto" [formControl]="stateCtrl">
+            </md-input-container>
+
+        </div>
+
+
+        <md-autocomplete #auto="mdAutocomplete">
+            <md-option *ngFor="let state of filteredStates | async" [value]="state">
+                {{ state }}
+            </md-option>
+        </md-autocomplete>
+
+
+    </md-tab>
+    <md-tab>
+        <ng-template md-tab-label>API</ng-template>
+
+        <h1>API</h1>
+
+    </md-tab>
+
+    <md-tab>
+        <ng-template md-tab-label>EXAMPLES</ng-template>
+
+        <h1>EXAMPLES</h1>
+
+    </md-tab>
+
 </md-tab-group>

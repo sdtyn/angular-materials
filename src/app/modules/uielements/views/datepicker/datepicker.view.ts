@@ -5,8 +5,11 @@ import {
   MdDatepickerModule, 
   MdNativeDateModule, 
   MdButtonModule,
-  MdButtonToggleModule, 
+  MdButtonToggleModule
 } from '@angular/material';
+
+
+import { Datepicker } from './components/datepicker.component';
 
 @Component({
   selector: 'datepicker-view',
