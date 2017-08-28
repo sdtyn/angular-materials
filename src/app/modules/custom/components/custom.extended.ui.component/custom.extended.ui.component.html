@@ -3,3 +3,44 @@
 <h3>Name: {{name}}</h3>
 <h3>Label: {{label}}</h3>
 <h3>Description: {{description}}</h3>
+<br><br>
+<!--Angular 2 Transclusion / Content Projection-->
+<fx-field>
+    <fx-label text="Das ist ein fx-label attribute"></fx-label>
+    <fx-label>
+        Das ist ein fx-label element
+    </fx-label>
+    <fx-span>Das ist ein fx-span element</fx-span>
+</fx-field>
+
+<hr />
+
+<fx-block>
+
+    <div class="header">
+        Das ist fx-block-header content
+    </div>
+
+    Das ist fx-block content
+
+    <div class="footer">
+        Das ist fx-block-footer content
+    </div>
+
+</fx-block>
+
+<hr />
+
+<fx-block>
+
+    <header>
+        Das ist fx-block-header content
+    </header>
+
+    Das ist fx-block content
+
+    <footer>
+        Das ist fx-block-footer content
+    </footer>
+
+</fx-block>

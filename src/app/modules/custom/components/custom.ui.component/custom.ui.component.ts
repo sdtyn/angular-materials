@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { FormatterUtils } from 'bow-lib/FormatterUtils';
 import { UIComponent } from 'sdtyn-core/core';
 
 

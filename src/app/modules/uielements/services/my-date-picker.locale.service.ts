@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+/*import { Injectable } from "@angular/core";
 import { IMyLocales, IMyOptions } from "sdtyn-core/lib/interfaces/index";
 
 @Injectable()
@@ -333,4 +333,4 @@ export class LocaleService {
         // Default: en
         return this.locales["en"];
     }
-}
+}*/

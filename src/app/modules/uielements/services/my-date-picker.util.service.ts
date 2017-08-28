@@ -1,10 +1,9 @@
-import { Injectable } from "@angular/core";
-import { IMyDate } from "sdtyn-core/lib/interfaces/my-date.interface";
-import { IMyDateRange } from "sdtyn-core/lib/interfaces/my-date-range.interface";
-import { IMyMonth } from "sdtyn-core/lib/interfaces/my-month.interface";
-import { IMyMonthLabels } from "sdtyn-core/lib/interfaces/my-month-labels.interface";
-import { IMyMarkedDates } from "sdtyn-core/lib/interfaces/my-marked-dates.interface";
-import { IMyMarkedDate } from "sdtyn-core/lib/interfaces/my-marked-date.interface";
+/*import { Injectable } from "@angular/core";
+import { IMyDate,
+        IMyMonth,
+        IMyMonthLabels,
+        IMyMarkedDates,
+        IMyMarkedDate} from "sdtyn-core/lib/interfaces/index";
 
 const M = "m";
 const MM = "mm";
@@ -245,4 +244,4 @@ export class UtilService {
     getWeekdayIndex(wd: string) {
         return this.weekDays.indexOf(wd);
     }
-}
+}*/
