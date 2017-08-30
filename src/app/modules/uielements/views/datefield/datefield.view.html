@@ -9,7 +9,7 @@
             </div>
 
             <div class="datefieldContainer">
-                <fx-datefield [startAt]="startDate" [label]="'Anfangsdatum'"></fx-datefield>
+                <fx-datefield [startAt]="startDate" [label]="'Anfangsdatum'" (focusOut)="focusOut($event)"></fx-datefield>
             </div>
 
             <div class="datefieldContainer">

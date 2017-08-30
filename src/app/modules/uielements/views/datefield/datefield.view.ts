@@ -10,8 +10,7 @@ export class DatefieldView {
    startDate = new Date(1990, 0, 1);
    inputValue = new Date(2000, 4, 2);
 
-
-   dateInput(){
-
+   focusOut(event){
+      console.log(event);
    }
 }

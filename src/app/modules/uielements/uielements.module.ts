@@ -12,7 +12,7 @@ import {
   MdIconModule
 } from '@angular/material';
 
-import { FxDatefield } from 'sdtyn-core/core';
+import { FxDatefield, InputEvent } from 'sdtyn-core/core';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
