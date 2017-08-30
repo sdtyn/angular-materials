@@ -4,10 +4,11 @@
 <h3>Label: {{label}}</h3>
 <h3>Description: {{description}}</h3>
 <br><br>
+
 <!--Angular 2 Transclusion / Content Projection-->
 <fx-field>
-    <fx-label text="Das ist ein fx-label attribute"></fx-label>
-    <fx-label>
+    <fx-label text="Das ist ein fx-label attribute" styleName="fx_label"></fx-label>
+    <fx-label styleName="fx_label">
         Das ist ein fx-label element
     </fx-label>
     <fx-span>Das ist ein fx-span element</fx-span>
@@ -33,14 +34,14 @@
 
 <fx-block>
 
-    <header>
+    <fx-block-header>
         Das ist fx-block-header content
-    </header>
+    </fx-block-header>
 
     Das ist fx-block content
 
-    <footer>
+    <fx-block-footer>
         Das ist fx-block-footer content
-    </footer>
+    </fx-block-footer>
 
 </fx-block>

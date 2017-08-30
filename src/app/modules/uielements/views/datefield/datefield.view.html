@@ -1,0 +1,45 @@
+<md-tab-group>
+    <md-tab>
+        <ng-template md-tab-label>OVERVIEW</ng-template>
+
+        <div class="component-container">
+
+            <div class="datefieldContainer">
+                <fx-datefield [label]="'Date'"></fx-datefield>
+            </div>
+
+            <div class="datefieldContainer">
+                <fx-datefield [startAt]="startDate" [label]="'Anfangsdatum'"></fx-datefield>
+            </div>
+
+            <div class="datefieldContainer">
+                <fx-datefield [startAt]="startDate" [datepickerDisabled]="true" [label]="'Datepicker-Disbaled'"></fx-datefield>
+            </div>
+
+            <div class="datefieldContainer">
+                <fx-datefield [inputValue]="inputValue" [startAt]="startDate" [label]="'Default-Input-Value'"></fx-datefield>
+            </div>
+
+            <div class="datefieldContainer">
+                <fx-datefield [inputDisabled]="true" [inputValue]="inputValue" [startAt]="startDate" [label]="'Input-Disabled'"></fx-datefield>
+            </div>
+
+        </div>
+
+
+    </md-tab>
+    <md-tab>
+        <ng-template md-tab-label>API</ng-template>
+
+        <h1>API</h1>
+
+    </md-tab>
+
+    <md-tab>
+        <ng-template md-tab-label>EXAMPLES</ng-template>
+
+        <h1>EXAMPLES</h1>
+
+    </md-tab>
+
+</md-tab-group>

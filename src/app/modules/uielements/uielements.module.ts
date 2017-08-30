@@ -12,6 +12,8 @@ import {
   MdIconModule
 } from '@angular/material';
 
+import { FxDatefield } from 'sdtyn-core/core';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -19,10 +21,9 @@ import { InputView } from './views/input/input.view';
 import { AutocompleteView } from './views/autocomplete/autocomplete.view';
 import { CheckboxView } from './views/checkbox/checkbox.view';
 import { RadioView } from './views/radio/radio.view';
-//import { DatepickerView } from './views/datepicker/datepicker.view';
+import { DatefieldView } from './views/datefield/datefield.view';
 import { SelectView } from './views/select/select.view';
 import { SliderView } from './views/slider/slider.view';
-//import { Datepicker } from './views/datepicker/components/datepicker.component';
 
 
 const routes: Routes = [
@@ -30,7 +31,7 @@ const routes: Routes = [
   { path: 'uielements/autocomplete', 	component: AutocompleteView },
   { path: 'uielements/checkbox', 		component: CheckboxView },
   { path: 'uielements/radio', 			component: RadioView },
-  //{ path: 'uielements/datepicker', 		component: DatepickerView },
+  { path: 'uielements/datepicker', 		component: DatefieldView },
   { path: 'uielements/select', 			component: SelectView },
   { path: 'uielements/slider', 			component: SliderView }
 ];
@@ -43,7 +44,9 @@ const routes: Routes = [
 	  CheckboxView,
 	  RadioView,
 	  SelectView,
-    SliderView
+    SliderView,
+    DatefieldView,
+    FxDatefield
   ],
   imports: [
     BrowserModule,

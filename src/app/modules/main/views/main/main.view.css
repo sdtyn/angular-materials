@@ -316,3 +316,14 @@ a.article:hover {
 .item-border-top {
     border-top: #e7eaec 1px solid;
 }
+
+
+/*** Custom Components **/
+
+.fx_label {
+    width: 200px;
+    height: 30px;
+    padding: 4px;
+    background-color: coral;
+    float: inherit;
+}
