@@ -11,6 +11,7 @@ export const routes: Routes = [
   { path: '',								redirectTo: 'uielements', 		pathMatch: 'full' },
   { path: 'charts',							redirectTo: 'charts', 			pathMatch: 'full' },
   { path: 'custom',							redirectTo: 'custom', 			pathMatch: 'full' },
+  { path: 'forms',							redirectTo: 'forms', 			pathMatch: 'full' },
   { path: '**',								redirectTo: 'exception/404', 	pathMatch: 'full' }
 ];
 

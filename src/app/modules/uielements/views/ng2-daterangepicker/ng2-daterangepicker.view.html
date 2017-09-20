@@ -1,0 +1,29 @@
+<md-tab-group>
+    <md-tab>
+        <ng-template md-tab-label>OVERVIEW</ng-template>
+
+        <div class="component-container">
+
+            <div class="datefieldContainer">
+                <input type="text" name="daterangeInput" daterangepicker [options]="options" (selected)="selectedDate($event, daterange)" />
+            </div>
+
+        </div>
+
+
+    </md-tab>
+    <md-tab>
+        <ng-template md-tab-label>API</ng-template>
+
+        https://www.npmjs.com/package/ng2-daterangepicker
+
+    </md-tab>
+
+    <md-tab>
+        <ng-template md-tab-label>EXAMPLES</ng-template>
+
+        <h1>EXAMPLES</h1>
+
+    </md-tab>
+
+</md-tab-group>

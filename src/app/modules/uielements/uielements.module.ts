@@ -16,6 +16,8 @@ import { FxDatefield, InputEvent } from 'sdtyn-core/core';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { Daterangepicker } from 'ng2-daterangepicker';
+import { MyDateRangePickerModule } from 'mydaterangepicker';
 
 import { InputView } from './views/input/input.view';
 import { AutocompleteView } from './views/autocomplete/autocomplete.view';
@@ -24,7 +26,8 @@ import { RadioView } from './views/radio/radio.view';
 import { DatefieldView } from './views/datefield/datefield.view';
 import { SelectView } from './views/select/select.view';
 import { SliderView } from './views/slider/slider.view';
-
+import { NG2DateRangePickerView } from './views/ng2-daterangepicker/ng2-daterangepicker.view';
+import { MyDateRangePickerView } from './views/mydaterangepicker/mydaterangepicker.view';
 
 const routes: Routes = [
   { path: 'uielements/input', 			component: InputView },
@@ -32,6 +35,8 @@ const routes: Routes = [
   { path: 'uielements/checkbox', 		component: CheckboxView },
   { path: 'uielements/radio', 			component: RadioView },
   { path: 'uielements/datepicker', 		component: DatefieldView },
+  { path: 'uielements/ng2-daterangepicker', 			component: NG2DateRangePickerView },
+  { path: 'uielements/mydaterangepicker', 			component: MyDateRangePickerView },
   { path: 'uielements/select', 			component: SelectView },
   { path: 'uielements/slider', 			component: SliderView }
 ];
@@ -46,6 +51,8 @@ const routes: Routes = [
 	  SelectView,
     SliderView,
     DatefieldView,
+    NG2DateRangePickerView,
+    MyDateRangePickerView,
     FxDatefield
   ],
   imports: [
@@ -59,7 +66,9 @@ const routes: Routes = [
     MdButtonToggleModule, 
   	MdNativeDateModule,
     MdDatepickerModule,
-    MdIconModule
+    MyDateRangePickerModule,
+    MdIconModule,
+    Daterangepicker
     
   ],
   exports: [RouterModule],

@@ -13,6 +13,7 @@ import { HomeModule } 			from '../home/home.module';
 import { UIElementsModule } 	from '../uielements/uielements.module';
 import { ChartsModule } 		from '../charts/charts.module';
 import { CustomModule } 		from '../custom/custom.module';
+import { MyFormsModule } 		from '../forms/forms.module';
 
 /* Routing Module */
 import { RoutingModule } 		from '../core/routing.module';
@@ -30,6 +31,7 @@ import { RoutingModule } 		from '../core/routing.module';
     UIElementsModule,
     ChartsModule,
     CustomModule,
+    MyFormsModule,
     RoutingModule,
 	  NvD3Module
   ],
