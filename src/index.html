@@ -18,7 +18,143 @@
         .component-container {
             padding: 20px;
         }
+        
+        .daterangepicker {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0) !important;
+            background-color: rgba(255, 255, 255, 0) !important;
+        }
+        
+        .calendar {
+            background-color: #ffffff;
+        }
+        
+        .daterangepicker .input-mini {
+            border: 0!important;
+            border-radius: 0!important;
+            margin: 0!important;
+        }
+        
+        .daterangepicker .input-mini.active {
+            border: 0!important;
+            border-radius: 0!important;
+        }
+        
+        .form-control {
+            display: block;
+            width: 100%;
+            float: left;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #999999;
+            background-color: #fcfcfc;
+            background-image: none;
+            border: 0;
+            /* border-radius: 4px; */
+            /* -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075); */
+            /* box-shadow: inset 0 1px 1px rgba(0,0,0,.075); */
+            /* -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s; */
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            /* transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; */
+        }
+        
+        .glyphicon {
+            /* position: relative; */
+            width: 20px;
+            /* top: 1px; */
+            /* display: inline-block; */
+            font-family: 'Glyphicons Halflings';
+            font-style: normal;
+            /* font-weight: 400; */
+            font-size: 18px;
+            margin-top: 3px;
+            /* line-height: 1; */
+            float: right;
+            /* -webkit-font-smoothing: antialiased; */
+        }
+        
+        .calendar {
+            width: 300px;
+            float: left!important;
+            padding: 20px!important;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 160px;
+            padding: 5px 0;
+            margin: 2px 0 0;
+            font-size: 14px;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid rgba(238, 238, 238, 0.46) !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        }
+        
+        table.table-condensed {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 2px;
+        }
+        
+        .table-condensed th.month {
+            text-align: center;
+        }
+        
+        .table-condensed td.off {
+            color: #cccccc!important;
+            background-color: #f9f9f9 !important;
+            border-radius: 0!important;
+        }
+        
+        .table-condensed td {
+            cursor: pointer;
+        }
+        
+        .table-condensed tbody tr td.end-date {
+            background-color: #217be6;
+            border-radius: 0 6px 6px 0;
+            color: #ffed00;
+            background: #217be6!important;
+        }
+        
+        .table-condensed tbody tr td.start-date {
+            background-color: #1077cc;
+            color: #ffdb22;
+            border-radius: 6px 0 0 6px;
+            background: #1077cc !important;
+        }
+        
+        .table-condensed td.in-range {
+            background: rgba(35, 149, 226, 0.15) !important;
+        }
+        
+        td.off.active.end-date.in-range.available,
+        td.off.in-range.available {
+            color: #cccccc!important;
+            background-color: #f9f9f9 !important;
+            border-radius: 0!important;
+            background: #f9f9f9!important;
+        }
+        
+        .ranges {
+            float: lefT;
+            width: 200px;
+        }
     </style>
+
 
     <script type="text/javascript">
         $(document).ready(function() {

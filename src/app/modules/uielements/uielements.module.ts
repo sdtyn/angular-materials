@@ -18,6 +18,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { Daterangepicker } from 'ng2-daterangepicker';
 import { MyDateRangePickerModule } from 'mydaterangepicker';
+import { DaterangePickerModule } from 'ng2-daterange-picker';
 
 import { InputView } from './views/input/input.view';
 import { AutocompleteView } from './views/autocomplete/autocomplete.view';
@@ -27,6 +28,7 @@ import { DatefieldView } from './views/datefield/datefield.view';
 import { SelectView } from './views/select/select.view';
 import { SliderView } from './views/slider/slider.view';
 import { NG2DateRangePickerView } from './views/ng2-daterangepicker/ng2-daterangepicker.view';
+import { NG2DateRangePicker2View } from './views/ng2-daterange-picker/ng2-daterange-picker.view';
 import { MyDateRangePickerView } from './views/mydaterangepicker/mydaterangepicker.view';
 
 const routes: Routes = [
@@ -36,6 +38,7 @@ const routes: Routes = [
   { path: 'uielements/radio', 			component: RadioView },
   { path: 'uielements/datepicker', 		component: DatefieldView },
   { path: 'uielements/ng2-daterangepicker', 			component: NG2DateRangePickerView },
+  { path: 'uielements/ng2-daterange-picker', 			component: NG2DateRangePicker2View },
   { path: 'uielements/mydaterangepicker', 			component: MyDateRangePickerView },
   { path: 'uielements/select', 			component: SelectView },
   { path: 'uielements/slider', 			component: SliderView }
@@ -52,6 +55,7 @@ const routes: Routes = [
     SliderView,
     DatefieldView,
     NG2DateRangePickerView,
+    NG2DateRangePicker2View,
     MyDateRangePickerView,
     FxDatefield
   ],
@@ -68,7 +72,8 @@ const routes: Routes = [
     MdDatepickerModule,
     MyDateRangePickerModule,
     MdIconModule,
-    Daterangepicker
+    Daterangepicker,
+    DaterangePickerModule
     
   ],
   exports: [RouterModule],

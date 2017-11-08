@@ -2,30 +2,103 @@
     <md-tab>
         <ng-template md-tab-label>OVERVIEW</ng-template>
 
-        <div class="component-container">
 
-            <div class="datefieldContainer">
-                <fx-datefield [label]="'Date'"></fx-datefield>
-            </div>
 
-            <div class="datefieldContainer">
-                <fx-datefield [startAt]="startDate" [label]="'Anfangsdatum'" (focusOut)="focusOut($event)"></fx-datefield>
-            </div>
 
-            <div class="datefieldContainer">
-                <fx-datefield [startAt]="startDate" [datepickerDisabled]="true" [label]="'Datepicker-Disbaled'"></fx-datefield>
-            </div>
 
-            <div class="datefieldContainer">
-                <fx-datefield [inputValue]="inputValue" [startAt]="startDate" [label]="'Default-Input-Value'"></fx-datefield>
-            </div>
 
-            <div class="datefieldContainer">
-                <fx-datefield [inputDisabled]="true" [inputValue]="inputValue" [startAt]="startDate" [label]="'Input-Disabled'"></fx-datefield>
-            </div>
+
+
+
+
+
+
+
+
+
+
+
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+            }
+            
+            th,
+            td {
+                padding: 5px;
+                text-align: left;
+            }
+        </style>
+
+
+        <div style="width:100%;">
+
+            <input type="text" value="2018" [(ngModel)]="options.year" />
+            <input type="text" value="10" [(ngModel)]="options.month" />
+            <input type="text" value="01" [(ngModel)]="options.day" />
+            <input type="button" value="Refresh" (click)="refresh()" />
 
         </div>
 
+        <div style="width:100%; height:500px">
+
+            <div style="width:100%; height:28px;">
+
+                <div style="width:30px; height:100%; text-align:center; vertical-align:middle; float:left;"><a (click)="prev_month()" style="cursor:pointer">prev</a></div>
+                <div style="width:180px; height:100%; text-align:center; vertical-align:middle; float:left;">
+                    <a (click)="changeState(DAYS)" style="cursor:pointer">{{calendar.getSelectedDay()}}</a
+                            >&nbsp;&nbsp;
+                        <a (click)="changeState(MONTHS)" style="cursor:pointer">{{calendar.getSelectedMonthName()}}</a
+                        >&nbsp;&nbsp;
+                    <a (click)="changeState(YEARS)" style="cursor:pointer">{{calendar.getSelectedFullYear()}}</a>
+                </div>
+                <div style="width:30px; height:100%; text-align:center; vertical-align:middle; float:left;"><a (click)="next_month()" style="cursor:pointer">next</a></div>
+
+            </div>
+
+            <table *ngIf="state == DAYS">
+
+                <tr style="padding:2px;">
+                    <th style="width:30px; height:28px; text-align:center; vertical-align:middle;">{{dayName}}</th>
+                    <th style="width:30px; height:28px; text-align:center; vertical-align:middle;">{{dayName}}</th>
+                    <th style="width:30px; height:28px; text-align:center; vertical-align:middle;" *ngFor="let dayName of calendar.getDayNames()">{{dayName}}</th>
+                </tr>
+
+                <tr style="padding:2px;" *ngFor="let calendarWeek of calendar.calendarWeeks">
+                    <td style="width:30px; height:28px; text-align:center; vertical-align:middle; background-color:#d7d7d7;">{{calendarWeek.weekOfMonth}}</td>
+                    <td style="width:30px; height:28px; text-align:center; vertical-align:middle; background-color:#d7d7d7;">{{calendarWeek.weekOfYear}}</td>
+                    <td style="width:30px; height:28px; text-align:center; vertical-align:middle; background-color:#e7e7e7;" *ngFor="let calendarDay of calendarWeek.days">
+                        <a (click)="changeDay(calendarDay.day)" style="cursor:pointer">{{calendarDay.day}}</a>
+                    </td>
+                </tr>
+
+            </table>
+
+            <div style="width:100%" *ngIf="state == MONTHS">
+
+                <a (click)="changeState(DAYS)" style="cursor:pointer">prev</a>
+
+                <div style="width:100%;">
+                    <div style="padding:2px; width:100px; height:28px; float: left;" *ngFor="let monthName of calendar.monthNames; let i = index"><a (click)="changeMonth(i)" style="cursor:pointer">{{monthName}}</a> </div>
+                </div>
+
+            </div>
+
+            <div style="width:100%" *ngIf="state == YEARS">
+
+                <a (click)="changeState(DAYS)" style="cursor:pointer">prev</a>
+
+                <div style="width:100%;">
+                    <div style="padding:2px; width:40px; height:28px; float:left; cursor:pointer;" (click)="changeYearLists(calendar.yearList[0])">past</div>
+                    <div style="padding:2px; width:40px; height:28px; float:left;" *ngFor="let year of calendar.yearList"><a (click)="changeYear(year)" style="cursor:pointer">{{year}}</a></div>
+                    <div style="padding:2px; width:40px; height:28px; float:left; cursor:pointer;" (click)="changeYearLists(calendar.yearList[calendar.yearList.length-1])">future</div>
+                </div>
+
+            </div>
+
+        </div>
 
     </md-tab>
     <md-tab>
