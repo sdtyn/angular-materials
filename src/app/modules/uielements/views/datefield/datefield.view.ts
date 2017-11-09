@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Calendar } from 'sdtyn-core/core';
+import { Calendar } from '@sdtyn/fx/core';
 
 
 @Component({

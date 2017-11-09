@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { UIComponent } from 'sdtyn-core/core';
+import { UIComponent } from '@sdtyn/fx/core';
 
 
 @Component({

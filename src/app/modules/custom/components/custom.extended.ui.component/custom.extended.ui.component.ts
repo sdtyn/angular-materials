@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ExtendedUIComponent, FxField, FxLabel, FxSpan, FxBlock } from 'sdtyn-core/core';
+import { ExtendedUIComponent, FxField, FxLabel, FxSpan, FxBlock } from '@sdtyn/fx/core';
 
 
 @Component({

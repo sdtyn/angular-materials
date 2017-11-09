@@ -11,7 +11,7 @@ import { ExceptionsModule } 	from '../exceptions/exceptions.module';
 import { LoginModule } 			from '../login/login.module';
 import { HomeModule } 			from '../home/home.module';
 import { UIElementsModule } 	from '../uielements/uielements.module';
-import { ChartsModule } 		from '../charts/charts.module';
+//import { ChartsModule } 		from '../charts/charts.module';
 import { CustomModule } 		from '../custom/custom.module';
 import { MyFormsModule } 		from '../forms/forms.module';
 
@@ -29,7 +29,7 @@ import { RoutingModule } 		from '../core/routing.module';
 	  LoginModule,
 	  HomeModule,
     UIElementsModule,
-    ChartsModule,
+    //ChartsModule,
     CustomModule,
     MyFormsModule,
     RoutingModule,

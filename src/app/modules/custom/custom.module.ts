@@ -5,7 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CustomUIComponent } from './components/custom.ui.component/custom.ui.component';
 import { CustomExtendedUIComponent } from './components/custom.extended.ui.component/custom.extended.ui.component';
 
-import { FxField, FxLabel, FxSpan, FxBlock } from 'sdtyn-core/core';
+import { FxField, FxLabel, FxSpan, FxBlock } from '@sdtyn/fx/core';
 
 import {
   MaterialModule, 
